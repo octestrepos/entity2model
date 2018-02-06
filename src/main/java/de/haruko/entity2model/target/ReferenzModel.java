@@ -26,15 +26,17 @@ public class ReferenzModel {
         return id;
     }
 
-    public void setId(String id) {
+    public ReferenzModel setId(String id) {
         this.id = id;
+        return this;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public ReferenzModel setName(String name) {
         this.name = name;
+        return this;
     }
 }

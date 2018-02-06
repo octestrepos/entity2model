@@ -23,7 +23,7 @@ public class Mapper {
     private Master master;
     public static void main(String [] args) {
         Mapper m = new Mapper();
-        MasterModel masterModel = (MasterModel) ModelMapper.mapping(m.buildMaster(), new MasterModel());
+        MasterModel masterModel = (MasterModel) ModelFieldMapper.mapping(m.buildMaster(), new MasterModel());
         int x = 0;
     }
     
