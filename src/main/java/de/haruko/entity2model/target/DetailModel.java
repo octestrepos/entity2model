@@ -10,16 +10,9 @@
 
 package de.haruko.entity2model.target;
 
-import com.googlecode.jmapper.annotations.JMap;
-
-
 public class DetailModel {
-    @JMap
     private String id;
-    @JMap("${referenz.id}")
-    private String referenzId;
-    @JMap("${referenz.name}")
-    private String referenzName;
+    private ReferenzModel referenz;
 
     public String getId() {
         return id;
@@ -29,21 +22,12 @@ public class DetailModel {
         this.id = id;
     }
 
-    public String getReferenzId() {
-        return referenzId;
+    public ReferenzModel getReferenz() {
+        return referenz;
     }
 
-    public void setReferenzId(String referenzId) {
-        this.referenzId = referenzId;
+    public void setReferenz(ReferenzModel referenz) {
+        this.referenz = referenz;
     }
-
-    public String getReferenzName() {
-        return referenzName;
-    }
-
-    public void setReferenzName(String referenzName) {
-        this.referenzName = referenzName;
-    }
-    
     
 }

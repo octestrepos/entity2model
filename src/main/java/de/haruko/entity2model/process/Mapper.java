@@ -10,13 +10,9 @@
 
 package de.haruko.entity2model.process;
 
-import com.googlecode.jmapper.JMapper;
-import com.googlecode.jmapper.api.JMapperAPI;
-import com.googlecode.jmapper.api.MappedClass;
 import de.haruko.entity2model.entity.Detail;
 import de.haruko.entity2model.entity.Master;
 import de.haruko.entity2model.entity.Referenz;
-import de.haruko.entity2model.target.DetailModel;
 import de.haruko.entity2model.target.MasterModel;
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -27,14 +23,8 @@ public class Mapper {
     private Master master;
     public static void main(String [] args) {
         Mapper m = new Mapper();
-                        
-        
-        JMapperAPI api = new JMapperAPI();
-        MappedClass mappedClass = new MappedClass(DetailModel.class);
-        api.add(mappedClass);
-        JMapper<MasterModel,Master> jmapper = new JMapper<MasterModel,Master>(MasterModel.class, Master.class, api);
-        MasterModel masterModel = (MasterModel) jmapper.getDestination(m.buildMaster());
-        int i = 0;
+        MasterModel masterModel = (MasterModel) ModelMapper.mapping(m.buildMaster(), new MasterModel());
+        int x = 0;
     }
     
     

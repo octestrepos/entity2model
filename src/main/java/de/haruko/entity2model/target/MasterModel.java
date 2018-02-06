@@ -10,20 +10,15 @@
 
 package de.haruko.entity2model.target;
 
-import com.googlecode.jmapper.annotations.JMap;
 import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
 
 public class MasterModel {
-    @JMap
     private String id;
-    @JMap
     private Date datum;
-    @JMap
     private BigDecimal zahl;
-    @JMap("details")
     private List<DetailModel> details;
 
     public String getId() {
